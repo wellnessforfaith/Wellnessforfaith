@@ -1,0 +1,157 @@
+{% extends "base.html" %}
+{% block title %}Home page{% endblock %}
+
+{% block content %}
+<div class="home-wrapper">
+  <div class="welcome-section">
+    <h2 style="text-shadow: 2px 2px 8px rgba(0,0,0,0.8);">Selamat Datang di</h2>
+    <h1 style="font-size: 4rem; font-weight: bold; text-shadow: 2px 2px 10px rgba(0,0,0,0.8);">Wellness for Faith</h1>
+    <h3 style="text-shadow: 2px 2px 8px rgba(0,0,0,0.8);">Stasi Santo Petrus Rasul</h3>
+  </div>
+
+  <div class="shortcuts-section">
+    <div class="shortcuts">
+      <a href="Jadwal" class="shortcut-card">
+        <i class="fa fa-calendar"></i>
+        <span>Jadwal</span>
+      </a>
+      <a href="tentang" class="shortcut-card">
+        <i class="fa fa-info-circle"></i>
+        <span>Tentang Kami</span>
+      </a>
+      <a href="galang" class="shortcut-card">
+        <i class="fa fa-handshake-o"></i>
+        <span>Galang Dana</span>
+      </a>
+      <a href="#" class="shortcut-card">
+        <i class="fa fa-line-chart"></i>
+        <span>Progres Penggalangan</span>
+      </a>
+      <a href="#" class="shortcut-card">
+        <i class="fa fa-newspaper-o"></i>
+        <span>Berita</span>
+      </a>
+    </div>
+
+    <div class="text-center mt-4">
+      <a href="signup" class="btn-daftar">Mendaftar</a>
+    </div>
+  </div>
+</div>
+
+<style>
+  .home-wrapper {
+    display: block;
+  }
+  .welcome-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+  }
+  .shortcuts-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+  }
+  .shortcuts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .shortcut-card {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 10px;
+    padding: 20px 25px;
+    min-width: 140px;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+  }
+  .shortcut-card:hover {
+    background: rgba(255, 215, 0, 0.2);
+    border-color: #ffd700;
+    color: #ffd700;
+    transform: translateY(-3px);
+  }
+  .shortcut-card i {
+    font-size: 1.8rem;
+  }
+  .shortcut-card span {
+    font-size: 0.95rem;
+  }
+  .btn-daftar {
+    display: inline-block;
+    background: #ffd700;
+    color: #000;
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 15px 60px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  .btn-daftar:hover {
+    background: #e6c200;
+    transform: scale(1.05);
+  }
+
+  @media (max-width: 768px) {
+    .welcome-section h1 {
+      font-size: 2.2rem !important;
+    }
+    .welcome-section h2 {
+      font-size: 1.3rem;
+    }
+    .welcome-section h3 {
+      font-size: 1.1rem;
+    }
+    .shortcut-card {
+      min-width: 100px;
+      padding: 14px 16px;
+    }
+    .shortcut-card i {
+      font-size: 1.4rem;
+    }
+    .shortcut-card span {
+      font-size: 0.8rem;
+    }
+    .shortcuts {
+      gap: 10px;
+    }
+    .btn-daftar {
+      font-size: 1.1rem;
+      padding: 12px 40px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .welcome-section h1 {
+      font-size: 1.8rem !important;
+    }
+    .shortcut-card {
+      min-width: 80px;
+      padding: 10px 12px;
+    }
+    .btn-daftar {
+      font-size: 1rem;
+      padding: 10px 30px;
+    }
+  }
+</style>
+{% endblock %}

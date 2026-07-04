@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block title %}Sign Up{% endblock %}
+
+{% block content %}
+<div style="display: flex; align-items: center; justify-content: center; min-height: 100vh; padding: 20px;">
+  <div class="login-card">
+    <h2 class="text-center mb-4">Sign Up</h2>
+    <form action="#" method="post">
+      <div class="mb-3">
+        <label class="form-label">Username</label>
+        <input type="text" class="form-control" name="nm" placeholder="Masukkan username" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input type="email" class="form-control" name="email" placeholder="Masukkan email" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Password</label>
+        <input type="password" class="form-control" name="password" placeholder="Buat password" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Konfirmasi Password</label>
+        <input type="password" class="form-control" name="confirm_password" placeholder="Ulangi password" required>
+      </div>
+      <button type="submit" class="btn btn-primary w-100">Daftar</button>
+    </form>
+    <p class="text-center mt-3">
+      Sudah punya akun? <a href="login">Login</a>
+    </p>
+  </div>
+</div>
+
+<style>
+  .login-card {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    padding: 40px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 400px;
+    color: #fff;
+  }
+  .login-card .form-label {
+    color: #fff;
+  }
+  .login-card .form-control {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.3);
+    color: #fff;
+  }
+  .login-card .form-control::placeholder {
+    color: rgba(255,255,255,0.5);
+  }
+  .login-card .form-control:focus {
+    background: rgba(255,255,255,0.15);
+    border-color: #ffd700;
+    color: #fff;
+    box-shadow: none;
+  }
+  .login-card a {
+    color: #ffd700;
+    text-decoration: none;
+  }
+  .login-card a:hover {
+    text-decoration: underline;
+  }
+</style>
+{% endblock %}

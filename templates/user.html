@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block title %}User page{% endblock %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+{% block content %}
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for msg in messages %}
+                <p>{{msg}}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+<h2>Welcome, {{user}}</h2>
+<form action="#" method="POST">
+    <input type="email" name="email" placeholder="Enter Email" value="{{email if email}}"/>
+    <input type="submit" value="submit"/>
+</form>
+
+<div class="container">
+<div class="row">
+    <h2>Select a file to upload</h2>
+        <p>
+            {% with messages = get_flashed_messages() %}
+              {% if messages %}
+                <ul>
+                {% for message in messages %}
+                  <li>{{ message }}</li>
+                {% endfor %}
+                </ul>
+              {% endif %}
+            {% endwith %}
+        </p>
+        {% if filename %}
+            <div>
+                <img src="{{ url_for('display_image', filename=filename) }}" style="max-width: 300px; max-height: 400;">
+            </div>
+        {% endif %}
+        <form method="post" action="/user" enctype="multipart/form-data">
+            <dl>
+                <p>
+                    <input type="file" name="file" class="form-control" autocomplete="off" required>
+                </p>
+            </dl>
+            <p>
+                <input type="submit" value="Upload" class="btn btn-info">
+            </p>
+        </form>
+</div>
+</div>
+{% endblock %}

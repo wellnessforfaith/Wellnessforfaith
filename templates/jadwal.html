@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% block title %}Jadwal{% endblock %}
+
+{% block content %}
+<div style="display: flex; align-items: center; justify-content: center; min-height: 100vh; padding: 20px;">
+  <div class="jadwal-card">
+    <h2 class="text-center mb-4">Jadwal Kegiatan</h2>
+    <div class="table-responsive">
+    <table class="table table-custom">
+      <thead>
+        <tr>
+          <th>Hari</th>
+          <th>Tanggal</th>
+          <th>Kegiatan</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Senin</td>
+          <td>29 Juni 2026</td>
+          <td>Doa Rosario & Adorasi</td>
+        </tr>
+        <tr>
+          <td>Selasa</td>
+          <td>30 Juni 2026</td>
+          <td>Latihan Koor</td>
+        </tr>
+        <tr>
+          <td>Rabu</td>
+          <td>1 Juli 2026</td>
+          <td>Bible Study</td>
+        </tr>
+        <tr>
+          <td>Kamis</td>
+          <td>2 Juli 2026</td>
+          <td>Misa Kudus</td>
+        </tr>
+        <tr>
+          <td>Jumat</td>
+          <td>3 Juli 2026</td>
+          <td>Jalan Salib & Doa Lingkungan</td>
+        </tr>
+        <tr>
+          <td>Sabtu</td>
+          <td>4 Juli 2026</td>
+          <td>Bakti Sosial</td>
+        </tr>
+        <tr>
+          <td>Minggu</td>
+          <td>5 Juli 2026</td>
+          <td>Misa Hari Minggu</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</div>
+
+<style>
+  .jadwal-card {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    padding: 40px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 700px;
+    color: #fff;
+  }
+  .table-custom {
+    color: #fff;
+    margin-bottom: 0;
+  }
+  .table-custom th {
+    color: #ffd700;
+    border-color: rgba(255,255,255,0.2);
+  }
+  .table-custom td {
+    border-color: rgba(255,255,255,0.2);
+  }
+  .table-custom tbody tr:hover {
+    background: rgba(255, 215, 0, 0.1);
+  }
+
+  @media (max-width: 768px) {
+    .jadwal-card {
+      padding: 20px 15px;
+      max-width: 95%;
+    }
+  }
+</style>
+{% endblock %}

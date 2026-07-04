@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}Kategori Galang Dana{% endblock %}
+
+{% block content %}
+<div style="display: flex; align-items: center; justify-content: center; min-height: 100vh; padding: 20px;">
+  <div class="galang-card">
+    <h2 class="text-center mb-4">Pilih Kategori</h2>
+    <p class="text-center">Pilih kategori penggalangan dana yang sesuai:</p>
+    <div class="d-grid gap-3 mt-4">
+      <a href="#" class="btn btn-kategori">Kesehatan & Medis</a>
+      <a href="#" class="btn btn-kategori">Pendidikan</a>
+      <a href="#" class="btn btn-kategori">Kegiatan Gereja</a>
+      <a href="#" class="btn btn-kategori">Bencana Alam</a>
+      <a href="#" class="btn btn-kategori">Sosial & Kemanusiaan</a>
+    </div>
+  </div>
+</div>
+
+<style>
+  .btn-kategori {
+    background: rgba(255, 215, 0, 0.15);
+    color: #fff;
+    border: 1px solid rgba(255, 215, 0, 0.4);
+    padding: 14px 20px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  .btn-kategori:hover {
+    background: rgba(255, 215, 0, 0.3);
+    color: #ffd700;
+    border-color: #ffd700;
+  }
+
+  @media (max-width: 768px) {
+    .galang-card {
+      padding: 30px 20px;
+      max-width: 90%;
+    }
+  }
+</style>
+{% endblock %}

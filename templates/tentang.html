@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}Tentang Kami{% endblock %}
+
+{% block content %}
+<div style="display: flex; align-items: center; justify-content: center; min-height: 100vh; padding: 20px;">
+  <div class="tentang-card">
+    <h2 class="text-center mb-4">Tentang Kami</h2>
+    <p>
+      Selamat datang di <strong>Wellness for Faith</strong> — sebuah wadah untuk memperkuat iman dan kebugaran rohani
+      di <strong>Stasi Santo Petrus Rasul</strong>.
+    </p>
+    <p>
+      Kami percaya bahwa iman yang sehat lahir dari tubuh dan jiwa yang sehat. Melalui berbagai kegiatan dan
+      pendampingan, kami mengajak seluruh umat untuk bertumbuh dalam kasih dan pelayanan.
+    </p>
+  </div>
+</div>
+
+<style>
+  .tentang-card {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    padding: 40px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 600px;
+    color: #fff;
+  }
+  .tentang-card p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+  .tentang-card strong {
+    color: #ffd700;
+  }
+
+  @media (max-width: 768px) {
+    .tentang-card {
+      padding: 30px 20px;
+      max-width: 90%;
+    }
+    .tentang-card p {
+      font-size: 1rem;
+    }
+  }
+</style>
+{% endblock %}
